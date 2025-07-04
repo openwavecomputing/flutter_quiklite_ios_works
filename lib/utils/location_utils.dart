@@ -66,6 +66,11 @@ class LocationUtils {
             .listen((Position position) async {
       debugPrint(
           "Position listener latitude ${position.latitude} longitude ${position.longitude}");
+      LocalNotifications.showSimpleNotification(
+          notificationId: ComparisonConstants.notificationIdStartDuty,
+          title: "Lat and lang",
+          body: "${position.latitude},${position.longitude}",
+          payload: "");
       LocationOperations().addLocation(LocationRow(
           locationLatLong:
           '${position.latitude.toString()},${position.longitude.toString()}',
