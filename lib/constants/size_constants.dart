@@ -1,0 +1,35 @@
+class SizeConstants {
+  static double width = 0.0;
+  static double height = 0.0;
+  static double s1 = 1.0;
+  static double s2 = 2.0;
+  static double s4 = 4.0;
+  static double s6 = 6.0;
+  static double s8 = 8.0;
+  static double s10 = 10.0;
+  static double s12 = 12.0;
+  static double s14 = 14.0;
+  static double s16 = 16.0;
+  static double s18 = 18.0;
+  static double s20 = 20.0;
+  static double s24 = 24.0;
+  static double s26 = 26.0;
+  static double s32 = 32.0;
+  static double s38 = 38.0;
+  static double s45 = 45.0;
+  static double s56 = 56.0;
+  static double s64 = 64.0;
+  static double s72 = 72.0;
+  static double s86 = 86.0;
+  static double s100 = 100.0;
+  static double s110 = 110.0;
+  static double s120 = 120.0;
+  static double s150 = 150.0;
+  static double s180 = 180.0;
+  static double s190 = 190.0;
+  static double s220 = 220.0;
+  static double s250 = 250.0;
+  static double s280 = 280.0;
+  static double s300 = 300.0;
+  static double s380 = 380.0;
+}

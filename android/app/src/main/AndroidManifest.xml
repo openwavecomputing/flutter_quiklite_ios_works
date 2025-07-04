@@ -1,4 +1,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- SCHEDULE_EXACT_ALARM is must to show local notification in Android 12 devices -->
+    <!-- Without this permission notification for location updates, job sync will not be shown and performing respective actions -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.BACKGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:label="quiklite_ios_works"
         android:name="${applicationName}"

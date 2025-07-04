@@ -35,6 +35,35 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
 
+  # Used to pick Current location and Stream location
+  # In our app we are using this in customer unavailable and technician tracking
+  #geolocator: ^14.0.0 #  Apr 15, 2025  #Error: The method 'toARGB32' isn't defined for the class 'Color'.
+  geolocator: ^13.0.4 #Mar 31, 2025
+
+  # Used to perform background operations even the app is in background or terminated
+  # In our app we are using this location tracking and save locally and also for offline table sync online
+  flutter_background_service: ^5.1.0 # Dec 21, 2024
+
+  # Used to show notification to the user
+  # In our app we are using this for location tracking in background must be informed to the user
+  # We are also planning to show new job assigned notification
+  flutter_local_notifications: ^19.1.0  # Nov 11, 2024
+
+  ################## APP OFFLINE PACKAGES #####################
+  # Used to perform CRUD operations in offline database, tables
+  # Through out an app we are using this to save, read, update the data offline
+  sqflite: ^2.4.1 # Nov 8, 2024
+  path: ^1.9.0 # Dec 5, 2023
+
+  # Used to work with internationalization, date and number formatting
+  # Through out an app we are using this to convert date format
+  intl: ^0.19.0 # Jan 24, 2025
+
+  # Used to ask permission to the user from our app
+  # In our app we are using this for feedback signature save
+  # Also we are using this for notification and location permissions
+  permission_handler: ^12.0.0+1 # Mar 27, 2024
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
