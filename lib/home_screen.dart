@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_background_service/flutter_background_service.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:quiklite_ios_works/services/quiklite_service.dart';
 
 import 'alert/alert_action.dart';
 import 'alert/app_alert.dart';
+import 'constants/comparison_constants.dart';
 import 'constants/word_constants.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,6 +21,8 @@ class _HomeScreenState extends State<HomeScreen> {
   String latitude = "";
   String longitude = "";
   bool notificationStatus = false;
+
+  final service = FlutterBackgroundService();
 
   @override
   Widget build(BuildContext context) {
@@ -190,6 +195,16 @@ class _HomeScreenState extends State<HomeScreen> {
         ElevatedButton(
           onPressed: () {
             print('Start Duty');
+            service.isRunning().then((isRunning) async {
+              debugPrint('isRunning 1 $isRunning');
+              if (!isRunning) {
+                await initializeService().then((value) {
+                  service.invoke(ComparisonConstants.serviceStartDuty);
+                });
+              } else {
+                service.invoke(ComparisonConstants.serviceStartDuty);
+              }
+            });
           },
           child: Text(
             'Start Duty',
@@ -200,6 +215,14 @@ class _HomeScreenState extends State<HomeScreen> {
         ElevatedButton(
           onPressed: () {
             print('Stop Duty');
+
+            service.isRunning().then((isRunning) {
+              debugPrint('isRunning 0 $isRunning');
+              if (isRunning) {
+                service.invoke(ComparisonConstants.serviceStopDuty);
+
+              }
+            });
           },
           child: Text(
             'Stop Duty',

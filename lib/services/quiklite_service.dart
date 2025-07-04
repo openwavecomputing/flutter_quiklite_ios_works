@@ -77,7 +77,7 @@ void onStart(ServiceInstance service) async {
   service.on(ComparisonConstants.serviceStopDuty).listen((event) async {
     print("ServiceInstance serviceStopDuty");
     LocationUtils().stopLocationTrackingForEndDuty();
-
+    service.stopSelf();
   });
 
   service.on(ComparisonConstants.serviceStopService).listen((event) {

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:quiklite_ios_works/services/quiklite_service.dart';
 
 import 'constants/word_constants.dart';
 import 'home_screen.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeService();
   runApp(const MyApp());
 }
 

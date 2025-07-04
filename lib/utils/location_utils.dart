@@ -59,7 +59,7 @@ class LocationUtils {
 
     const locationSettings = LocationSettings(
         accuracy: LocationAccuracy.high,
-        distanceFilter: 50);
+        distanceFilter: 0);
 
     _getPositionSubscriptionForStartEndDuty =
         Geolocator.getPositionStream(locationSettings: locationSettings)
