@@ -153,6 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
             print('Notification Check');
             final isGranted = await checkForNotificationStatus();
             notificationStatus = isGranted;
+            setState(() {});
             if (isGranted) {
               print("Notification permission granted.");
             } else {
