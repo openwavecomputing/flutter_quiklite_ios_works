@@ -15,8 +15,18 @@ class WordConstants {
       "QuikAllot Technician enables real-time tracking and accurate work order updates. Please select 'Always Allow' to grant full background location access";
   // static const String wNotificationEndDutyRemainderMessage =
   //     "Don’t forget to end your duty";
-  static const String  wLocationWait = "Please wait while we fetch the location";
-  static const String  wLocationEmpty = "Please enable the location";
-  static const String  wLocationPermissionDeniedPermanently = "QuikAllot Technician enables real-time tracking and accurate work order updates. Please select 'Always Allow' to grant full background location access. Do you want to update app settings?";
+  static const String wLocationWait = "Please wait while we fetch the location";
+  static const String wLocationEmpty = "Please enable the location";
+  static const String wLocationPermissionDeniedPermanently =
+      "QuikAllot Technician enables real-time tracking and accurate work order updates. Please select 'Always Allow' to grant full background location access. Do you want to update app settings?";
+  static const String wLocationServiceOff =
+      "Location services are turned off. Please enable them.";
+  static const String wLocationFetchError = "Failed to fetch current location.";
+  static const String wLocationPermissionError =
+      "Location permission not sufficient.";
 
+  static const String wNotificationPermissionDenied =
+      "Notification permission denied.";
+  static const String wNotificationPermissionDeniedPermanently =
+      "Notification permission permanently denied. Please enable it in app settings.";
 }
