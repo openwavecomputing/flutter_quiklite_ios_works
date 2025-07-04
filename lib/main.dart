@@ -3,10 +3,12 @@ import 'package:quiklite_ios_works/services/quiklite_service.dart';
 
 import 'constants/word_constants.dart';
 import 'home_screen.dart';
+import 'notification/local_notification.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await initializeService();
+  // await initializeService();
+  await LocalNotifications.init();
   runApp(const MyApp());
 }
 

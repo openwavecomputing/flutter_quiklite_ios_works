@@ -12,13 +12,13 @@ class WordConstants {
   static const String wNotificationLocationSync =
       "Locations syncing in progress";
   static const String wLocationPermissionDenied =
-      "QuikAllot Technician enables real-time tracking and accurate work order updates. Please select 'Always Allow' to grant full background location access";
+      "Background App enables real-time tracking and accurate work order updates. Please select 'Always Allow' to grant full background location access";
   // static const String wNotificationEndDutyRemainderMessage =
   //     "Don’t forget to end your duty";
   static const String wLocationWait = "Please wait while we fetch the location";
   static const String wLocationEmpty = "Please enable the location";
   static const String wLocationPermissionDeniedPermanently =
-      "QuikAllot Technician enables real-time tracking and accurate work order updates. Please select 'Always Allow' to grant full background location access. Do you want to update app settings?";
+      "Background App enables real-time tracking and accurate work order updates. Please select 'Always Allow' to grant full background location access. Do you want to update app settings?";
   static const String wLocationServiceOff =
       "Location services are turned off. Please enable them.";
   static const String wLocationFetchError = "Failed to fetch current location.";

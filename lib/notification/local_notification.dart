@@ -66,8 +66,8 @@ class LocalNotifications {
     const AndroidNotificationDetails androidNotificationDetails =
         AndroidNotificationDetails(
       '10001',
-      'QuikAllot Technician',
-      channelDescription: 'QuikAllot Technician notification',
+      'Background App',
+      channelDescription: 'Background App notification',
       importance: Importance.max,
       priority: Priority.high,
       autoCancel: true,

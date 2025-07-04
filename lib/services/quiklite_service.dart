@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_background_service/flutter_background_service.dart';
 
 import '../constants/comparison_constants.dart';
+import '../constants/word_constants.dart';
 import '../notification/local_notification.dart';
 import '../utils/location_utils.dart';
 
@@ -40,8 +41,8 @@ Future<void> initializeService() async {
       androidConfiguration: AndroidConfiguration(
           onStart: onStart,
           isForegroundMode: true,
-          initialNotificationTitle: "iOS Background",
-          initialNotificationContent:"Background service initiated"));
+          initialNotificationTitle: WordConstants.wAppName,
+          initialNotificationContent:WordConstants.wNotificationBackgroundService));
   debugPrint("Service-startService");
 
   await service.startService();
